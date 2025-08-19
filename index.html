@@ -92,6 +92,22 @@
             animation: fadeInUp 1s ease;
         }
 
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -355,6 +371,11 @@
                 font-size: 2rem;
             }
             
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
             .skills-grid,
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -411,6 +432,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <img src="images/profile.jpeg" alt="Revanth - Cloud and Data Engineer" class="profile-image">
             <h1>Hi, I'm Revanth</h1>
             <p class="subtitle">Data | Cloud | DevOps </p>
             <div class="tags">
@@ -431,12 +453,10 @@
         <div class="container">
             <h2>About Me</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
-                <p>I'm a passionate Data Engineer with expertise in building scalable data pipelines and cloud infrastructure. 
-                With a strong foundation in AWS services, DevOps practices, and modern data engineering tools, 
-                I help organizations transform their data into actionable insights.</p>
+                <p>I'm a passionate Cloud and Data Engineer with 7+ years of expertise in building scalable infrastructure and data solutions that drive business value. With a strong foundation in AWS services, DevOps practices, and modern engineering tools, I help organizations architect robust, efficient systems that transform data into actionable insights.
+</p>
                 <br>
-                <p>My experience spans across designing ETL/ELT pipelines, implementing CI/CD workflows, 
-                and architecting cloud-native solutions that handle petabytes of data efficiently.</p>
+                <p>My experience spans across designing cloud-native architectures, implementing automated CI/CD workflows, building high-performance data pipelines, and optimizing infrastructure for scale. Whether it's architecting multi-cloud solutions, orchestrating containerized applications, or processing petabytes of data, I thrive on solving complex technical challenges and delivering reliable, cost-effective solutions.</p>
             </div>
         </div>
     </section>
@@ -631,7 +651,7 @@
         <div class="container">
             <h2>Let's Connect</h2>
             <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                I'm always interested in discussing data engineering challenges and opportunities.
+                I'm always interested in discussing data engineering, cloud challenges and opportunities.
             </p>
             <div class="contact-links">
                 <a href="mailto:eswarrevanth@gmail.com" class="contact-link">
