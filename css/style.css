@@ -313,6 +313,20 @@ nav {
     color: white;
 }
 
+.btn-resume {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-resume:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(16, 185, 129, 0.3);
+}
+
 /* Section Styles */
 section {
     padding: 5rem 0;
