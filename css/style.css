@@ -32,7 +32,9 @@ body {
     border: 1px solid var(--border);
     border-radius: 25px;
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 500;
     color: var(--text);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
