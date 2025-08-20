@@ -82,3 +82,34 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
+// Website Status Indicator
+function updateStatusIndicator() {
+    const statusText = document.getElementById('statusText');
+    const now = new Date();
+    const currentMonth = now.toLocaleString('default', { month: 'short' });
+    const currentYear = now.getFullYear();
+    
+    // Update the main status text
+    statusText.textContent = `Updated ${currentMonth} ${currentYear}`;
+    
+    // You can manually update this when you make changes
+    const lastUpdate = new Date('2025-08-20'); // Update this date when you deploy changes
+    const daysSinceUpdate = Math.floor((now - lastUpdate) / (1000 * 60 * 60 * 24));
+    
+    // Change status dot color based on recency
+    const statusDot = document.querySelector('.status-dot');
+    if (daysSinceUpdate <= 7) {
+        statusDot.style.background = 'var(--accent)'; // Green - recently updated
+    } else if (daysSinceUpdate <= 30) {
+        statusDot.style.background = 'var(--primary)'; // Blue - updated this month  
+    } else {
+        statusDot.style.background = '#fbbf24'; // Yellow - needs update
+    }
+}
+
+// Initialize status indicator on page load
+document.addEventListener('DOMContentLoaded', updateStatusIndicator);
+
+// Initialize status indicator on page load
+document.addEventListener('DOMContentLoaded', updateStatusIndicator);
