@@ -186,6 +186,71 @@
             transform: translateY(-2px);
         }
 
+        /* Certification Popup */
+        .certification-tag {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cert-popup {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-card);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            padding: 1rem;
+            min-width: 280px;
+            max-width: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+
+        .cert-popup::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: var(--primary);
+        }
+
+        .certification-tag:hover .cert-popup {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cert-popup h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-list li {
+            color: var(--text);
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .cert-list li::before {
+            content: '🏆';
+            margin-right: 0.5rem;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -466,7 +531,18 @@
             <h1>Hi, I'm Revanth</h1>
             <p class="subtitle">Data | Cloud | DevOps </p>
             <div class="tags">
-                <span class="tag">AWS Certified</span>
+                <span class="tag certification-tag">
+                    AWS Certified
+                    <div class="cert-popup">
+                        <h4>AWS Certifications</h4>
+                        <ul class="cert-list">
+                            <li>AWS Cloud Practitioner</li>
+                            <li>AWS AI Practitioner</li>
+                            <li>AWS Data Engineer Associate</li>
+                            <li>AWS Solutions Architect Associate</li>
+                        </ul>
+                    </div>
+                </span>
                 <span class="tag">Data Pipeline Expert</span>
                 <span class="tag">Infrastructure as Code</span>
                 <span class="tag">Big Data Solutions</span>
