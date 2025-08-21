@@ -83,9 +83,11 @@ window.onclick = function(event) {
     }
 }
 
-// Website Status Indicator
+// Website Status Indicator (optional - only if element exists)
 function updateStatusIndicator() {
     const statusText = document.getElementById('statusText');
+    if (!statusText) return; // Exit if status indicator doesn't exist
+    
     const now = new Date();
     const currentMonth = now.toLocaleString('default', { month: 'short' });
     const currentYear = now.getFullYear();
@@ -99,17 +101,76 @@ function updateStatusIndicator() {
     
     // Change status dot color based on recency
     const statusDot = document.querySelector('.status-dot');
-    if (daysSinceUpdate <= 7) {
-        statusDot.style.background = 'var(--accent)'; // Green - recently updated
-    } else if (daysSinceUpdate <= 30) {
-        statusDot.style.background = 'var(--primary)'; // Blue - updated this month  
-    } else {
-        statusDot.style.background = '#fbbf24'; // Yellow - needs update
+    if (statusDot) {
+        if (daysSinceUpdate <= 7) {
+            statusDot.style.background = 'var(--accent)'; // Green - recently updated
+        } else if (daysSinceUpdate <= 30) {
+            statusDot.style.background = 'var(--primary)'; // Blue - updated this month  
+        } else {
+            statusDot.style.background = '#fbbf24'; // Yellow - needs update
+        }
     }
 }
 
-// Initialize status indicator on page load
-document.addEventListener('DOMContentLoaded', updateStatusIndicator);
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    console.log('Toggle mobile menu clicked'); // Debug log
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        console.log('Menu toggled', navLinks.classList.contains('active')); // Debug log
+    } else {
+        console.log('Elements not found:', { mobileMenuBtn, navLinks }); // Debug log
+    }
+}
 
-// Initialize status indicator on page load
-document.addEventListener('DOMContentLoaded', updateStatusIndicator);
+// Close mobile menu when clicking on a link
+function closeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.classList.remove('active');
+    navLinks.classList.remove('active');
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing...'); // Debug log
+    
+    // Initialize status indicator if it exists
+    updateStatusIndicator();
+    
+    // Initialize mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    console.log('Mobile menu button found:', mobileMenuBtn); // Debug log
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Button clicked!'); // Debug log
+            toggleMobileMenu();
+        });
+        console.log('Event listener added to mobile menu button');
+    } else {
+        console.log('Mobile menu button not found!');
+    }
+    
+    // Add event listeners to nav links to close menu when clicked
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (mobileMenuBtn && navLinks && !mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+});
