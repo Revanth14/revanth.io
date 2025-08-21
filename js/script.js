@@ -60,10 +60,10 @@ function showCertificate(certType) {
     
     // Map certification types to image paths
     const certPaths = {
-        'cloud-practitioner': 'certificates/aws-cloud-practitioner.jpg',
-        'ai-practitioner': 'certificates/aws-ai-practitioner.jpg',
+        'cloud-practitioner': 'certificates/aws-cloud-practitioner.jpeg',
+        'ai-practitioner': 'certificates/aws-ai-practitioner.jpeg',
         'data-engineer': 'certificates/aws-data-engineer.jpeg',
-        'solutions-architect': 'certificates/aws-solutions-architect.jpg'
+        'solutions-architect': 'certificates/aws-solutions-architect.jpeg'
     };
     
     certImage.src = certPaths[certType];
