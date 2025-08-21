@@ -806,10 +806,16 @@ footer {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 1rem;
     z-index: 1001;
     position: relative;
     pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger-line {
@@ -874,9 +880,13 @@ footer {
         display: block;
         transition: background 0.3s ease;
         margin: 0;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
     }
     
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a:active,
+    .nav-links a:focus {
         background: rgba(14, 165, 233, 0.1);
     }
     

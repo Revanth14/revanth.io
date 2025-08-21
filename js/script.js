@@ -148,12 +148,22 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Mobile menu button found:', mobileMenuBtn); // Debug log
     
     if (mobileMenuBtn) {
+        // Add both click and touchstart for better mobile support
         mobileMenuBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('Button clicked!'); // Debug log
             toggleMobileMenu();
         });
-        console.log('Event listener added to mobile menu button');
+        
+        mobileMenuBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Button touched!'); // Debug log
+            toggleMobileMenu();
+        }, { passive: false });
+        
+        console.log('Event listeners added to mobile menu button');
     } else {
         console.log('Mobile menu button not found!');
     }
