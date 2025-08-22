@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Revanth | Cloud & Data Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Revanth's journey as a Cloud & Data Engineer with 7+ years of experience in AWS, DevOps, and scalable data solutions.">
+    <meta name="keywords" content="About Revanth, Cloud Engineer, Data Engineer, AWS, DevOps, Experience, Background">
+    <meta name="author" content="Revanth">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://revanth14.github.io/revanth.io/about.html">
+    <meta property="og:title" content="About - Revanth | Cloud & Data Engineer">
+    <meta property="og:description" content="Learn about Revanth's journey as a Cloud & Data Engineer with 7+ years of experience in AWS, DevOps, and scalable data solutions.">
+    <meta property="og:image" content="https://revanth14.github.io/revanth.io/images/profile.jpeg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://revanth14.github.io/revanth.io/about.html">
+    <meta property="twitter:title" content="About - Revanth | Cloud & Data Engineer">
+    <meta property="twitter:description" content="Learn about Revanth's journey as a Cloud & Data Engineer with expertise in AWS and data solutions.">
+    <meta property="twitter:image" content="https://revanth14.github.io/revanth.io/images/profile.jpeg">
+    
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://revanth14.github.io/revanth.io/about.html">
+    <meta name="theme-color" content="#0EA5E9">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Revanth.io</a>
+            
+            <div class="nav-right">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="page-header">
+                <h1>About Me</h1>
+                <p class="page-subtitle">My journey as a Cloud & Data Engineer</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="content-block">
+                        <h2>Professional Background</h2>
+                        <p>I'm a passionate Cloud and Data Engineer with 7+ years of expertise in building scalable infrastructure and data solutions that drive business value. With a strong foundation in AWS services, DevOps practices, and modern engineering tools, I help organizations architect robust, efficient systems that transform data into actionable insights.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h2>Technical Expertise</h2>
+                        <p>My experience spans across designing cloud-native architectures, implementing automated CI/CD workflows, building high-performance data pipelines, and optimizing infrastructure for scale. Whether it's architecting multi-cloud solutions, orchestrating containerized applications, or processing petabytes of data, I thrive on solving complex technical challenges and delivering reliable, cost-effective solutions.</p>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h2>What Drives Me</h2>
+                        <p>I'm passionate about leveraging cutting-edge technologies to solve real-world problems. My goal is to bridge the gap between raw data and business insights, creating systems that not only perform exceptionally but also scale gracefully as organizations grow.</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="images/profile.jpeg" alt="Revanth - Cloud and Data Engineer" class="about-profile-image">
+                </div>
+            </div>
+            
+            <!-- Certifications Section -->
+            <div class="certifications-section">
+                <h2>Certifications</h2>
+                <div class="cert-grid">
+                    <div class="cert-card" onclick="showCertificate('cloud-practitioner')">
+                        <div class="cert-icon">☁️</div>
+                        <h3>AWS Cloud Practitioner</h3>
+                        <p>Foundational cloud knowledge</p>
+                    </div>
+                    <div class="cert-card" onclick="showCertificate('ai-practitioner')">
+                        <div class="cert-icon">🤖</div>
+                        <h3>AWS AI Practitioner</h3>
+                        <p>AI and ML services expertise</p>
+                    </div>
+                    <div class="cert-card" onclick="showCertificate('data-engineer')">
+                        <div class="cert-icon">📊</div>
+                        <h3>AWS Data Engineer Associate</h3>
+                        <p>Data pipeline and analytics</p>
+                    </div>
+                    <div class="cert-card" onclick="showCertificate('solutions-architect')">
+                        <div class="cert-icon">🏗️</div>
+                        <h3>AWS Solutions Architect Associate</h3>
+                        <p>Cloud architecture design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Revanth.io | Built with passion for data</p>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="cert-modal">
+        <div class="cert-modal-content">
+            <span class="close-modal" onclick="closeCertificate()">&times;</span>
+            <img id="certImage" src="" alt="AWS Certificate">
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

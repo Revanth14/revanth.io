@@ -136,6 +136,7 @@ function closeMobileMenu() {
     navLinks.classList.remove('active');
 }
 
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded, initializing...'); // Debug log
@@ -183,4 +184,132 @@ document.addEventListener('DOMContentLoaded', () => {
             closeMobileMenu();
         }
     });
+    
+    // Initialize contact form if it exists
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+    }
 });
+
+// Contact Form Functionality
+function handleContactForm(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    // Get form values
+    const name = formData.get('name').trim();
+    const email = formData.get('email').trim();
+    const subject = formData.get('subject').trim();
+    const message = formData.get('message').trim();
+    
+    // Validate form
+    if (!validateContactForm(name, email, subject, message)) {
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Simulate form submission (replace with actual endpoint)
+    setTimeout(() => {
+        // Reset form
+        form.reset();
+        
+        // Show success message
+        showFormMessage('Thank you! Your message has been sent successfully.', 'success');
+        
+        // Reset button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 1500);
+}
+
+function validateContactForm(name, email, subject, message) {
+    // Clear previous errors
+    clearFormErrors();
+    
+    let isValid = true;
+    
+    // Validate name
+    if (!name || name.length < 2) {
+        showFieldError('name', 'Please enter a valid name (at least 2 characters)');
+        isValid = false;
+    }
+    
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+        showFieldError('email', 'Please enter a valid email address');
+        isValid = false;
+    }
+    
+    // Validate subject
+    if (!subject || subject.length < 3) {
+        showFieldError('subject', 'Please enter a subject (at least 3 characters)');
+        isValid = false;
+    }
+    
+    // Validate message
+    if (!message || message.length < 10) {
+        showFieldError('message', 'Please enter a message (at least 10 characters)');
+        isValid = false;
+    }
+    
+    return isValid;
+}
+
+function showFieldError(fieldName, message) {
+    const field = document.getElementById(fieldName);
+    if (!field) return;
+    
+    // Add error class to field
+    field.classList.add('error');
+    
+    // Create or update error message
+    let errorElement = field.parentNode.querySelector('.error-message');
+    if (!errorElement) {
+        errorElement = document.createElement('span');
+        errorElement.className = 'error-message';
+        field.parentNode.appendChild(errorElement);
+    }
+    errorElement.textContent = message;
+}
+
+function clearFormErrors() {
+    // Remove error classes and messages
+    const errorFields = document.querySelectorAll('.contact-form .error');
+    errorFields.forEach(field => field.classList.remove('error'));
+    
+    const errorMessages = document.querySelectorAll('.contact-form .error-message');
+    errorMessages.forEach(msg => msg.remove());
+}
+
+function showFormMessage(message, type) {
+    // Remove existing messages
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message element
+    const messageElement = document.createElement('div');
+    messageElement.className = `form-message ${type}`;
+    messageElement.textContent = message;
+    
+    // Insert message before the form
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.parentNode.insertBefore(messageElement, contactForm);
+        
+        // Auto-remove message after 5 seconds
+        setTimeout(() => {
+            messageElement.remove();
+        }, 5000);
+    }
+}
