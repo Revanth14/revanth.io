@@ -1,0 +1,40 @@
+# API Keys and Secrets
+js/config.js
+
+# Documentation files (keep local only)
+*.md
+DEPLOYMENT-GUIDE.md
+API-KEY-SETUP.md
+CHATBOT-README.md
+ENHANCED-CHATBOT-GUIDE.md
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Node modules (if using)
+node_modules/
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Temporary files
+*.tmp
+*.temp

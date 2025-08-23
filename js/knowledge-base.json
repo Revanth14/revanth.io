@@ -1,0 +1,165 @@
+{
+  "personal": {
+    "name": "Revanth",
+    "title": "Cloud & Data Engineer",
+    "experience": "7+ years",
+    "location": "Available for remote opportunities",
+    "email": "eswarrevanth@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/revanthch14/",
+    "github": "https://github.com/revanth14",
+    "summary": "Passionate Cloud and Data Engineer with 7+ years of expertise in building scalable infrastructure and data solutions that drive business value. Strong foundation in AWS services, DevOps practices, and modern engineering tools."
+  },
+  "skills": {
+    "dataEngineering": [
+      "Apache Spark",
+      "Apache Kafka", 
+      "Apache Airflow",
+      "dbt",
+      "Databricks",
+      "Snowflake",
+      "ETL/ELT Pipelines",
+      "Data Warehousing",
+      "Data Lake Architecture"
+    ],
+    "aws": [
+      "EC2 & Lambda",
+      "S3 & Glacier", 
+      "EMR",
+      "Glue & Athena",
+      "Kinesis",
+      "Redshift",
+      "RDS & DynamoDB",
+      "CloudFormation",
+      "Step Functions"
+    ],
+    "devops": [
+      "Docker",
+      "Kubernetes", 
+      "Terraform",
+      "Jenkins",
+      "GitLab CI/CD",
+      "GitHub Actions",
+      "Ansible",
+      "Prometheus",
+      "Grafana"
+    ],
+    "programming": [
+      "Python",
+      "SQL",
+      "Scala", 
+      "Shell Scripting",
+      "PySpark",
+      "Pandas",
+      "NumPy",
+      "Git"
+    ]
+  },
+  "certifications": [
+    "AWS Cloud Practitioner",
+    "AWS AI Practitioner",
+    "AWS Data Engineer Associate", 
+    "AWS Solutions Architect Associate"
+  ],
+  "projects": [
+    {
+      "name": "Real-Time Data Pipeline",
+      "description": "Built a scalable real-time data pipeline processing 10M+ events daily using Kafka, Spark Streaming, and AWS services. Implemented exactly-once processing semantics and achieved sub-second latency.",
+      "tech": ["Apache Kafka", "Spark Streaming", "AWS Kinesis", "Python"],
+      "highlights": [
+        "Processes 10M+ events daily",
+        "Sub-second latency",
+        "Exactly-once processing semantics"
+      ]
+    },
+    {
+      "name": "Data Lake Architecture", 
+      "description": "Designed and implemented a cloud-native data lake on AWS handling 50TB+ of data. Created automated data ingestion pipelines with quality checks and cataloging using AWS Glue and Athena.",
+      "tech": ["AWS S3", "AWS Glue", "Athena", "Terraform"],
+      "highlights": [
+        "Handles 50TB+ of data",
+        "Automated data ingestion",
+        "Built-in quality checks"
+      ]
+    },
+    {
+      "name": "MLOps Platform",
+      "description": "Developed an end-to-end MLOps platform with automated model training, versioning, and deployment pipelines. Reduced model deployment time from weeks to hours.",
+      "tech": ["Kubeflow", "MLflow", "Docker", "GitLab CI/CD"],
+      "highlights": [
+        "End-to-end automation",
+        "Reduced deployment time by 80%+",
+        "Model versioning and monitoring"
+      ]
+    },
+    {
+      "name": "Infrastructure Automation",
+      "description": "Automated complete infrastructure provisioning using Infrastructure as Code, reducing deployment time by 80% and ensuring consistency across environments.",
+      "tech": ["Terraform", "Ansible", "CloudFormation", "Jenkins"],
+      "highlights": [
+        "80% faster deployments", 
+        "Infrastructure as Code",
+        "Multi-environment consistency"
+      ]
+    },
+    {
+      "name": "Data Quality Framework",
+      "description": "Built a comprehensive data quality monitoring system with automated anomaly detection, data profiling, and alerting mechanisms for critical data pipelines.",
+      "tech": ["Great Expectations", "Apache Airflow", "Python", "Grafana"],
+      "highlights": [
+        "Automated anomaly detection",
+        "Real-time data profiling",
+        "Comprehensive alerting"
+      ]
+    },
+    {
+      "name": "Cost Optimization Engine", 
+      "description": "Developed an automated cloud cost optimization system that reduced AWS spending by 40% through intelligent resource scheduling and right-sizing recommendations.",
+      "tech": ["AWS Lambda", "CloudWatch", "Python", "Cost Explorer API"],
+      "highlights": [
+        "40% cost reduction",
+        "Intelligent resource scheduling", 
+        "Automated right-sizing"
+      ]
+    }
+  ],
+  "quickQuestions": [
+    "What's your experience with AWS?",
+    "Tell me about your data engineering projects", 
+    "What certifications do you have?",
+    "How can I contact you?",
+    "What's your experience with Python?",
+    "Can you tell me about your MLOps work?",
+    "What's your background with Kubernetes?",
+    "Do you have experience with real-time data processing?"
+  ],
+  "faqs": [
+    {
+      "question": "How many years of experience does Revanth have?",
+      "answer": "Revanth has 7+ years of experience as a Cloud & Data Engineer, specializing in building scalable infrastructure and data solutions."
+    },
+    {
+      "question": "What are Revanth's main areas of expertise?",
+      "answer": "Revanth specializes in Cloud Architecture (AWS), Data Engineering (Spark, Kafka, Airflow), DevOps (Docker, Kubernetes, Terraform), and Infrastructure Automation."
+    },
+    {
+      "question": "What certifications does Revanth hold?",
+      "answer": "Revanth holds four AWS certifications: Cloud Practitioner, AI Practitioner, Data Engineer Associate, and Solutions Architect Associate."
+    },
+    {
+      "question": "Is Revanth available for new opportunities?", 
+      "answer": "Yes, Revanth is available for opportunities. You can reach out to him at eswarrevanth@gmail.com or connect on LinkedIn."
+    },
+    {
+      "question": "What's the scale of data Revanth has worked with?",
+      "answer": "Revanth has built systems handling 10M+ events daily and data lakes managing 50TB+ of data, with experience in both real-time and batch processing."
+    }
+  ],
+  "achievements": [
+    "Reduced cloud costs by 40% through optimization automation",
+    "Built data pipelines processing 10M+ events daily", 
+    "Implemented data lakes handling 50TB+ data",
+    "Achieved sub-second latency in real-time processing",
+    "Reduced ML model deployment time from weeks to hours",
+    "80% faster infrastructure deployments through automation"
+  ]
+}
