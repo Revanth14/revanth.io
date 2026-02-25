@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  other: {
+    "google": "notranslate",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="en" translate="no" className={`${inter.variable} ${jetbrains.variable} notranslate`}>
       <body>{children}</body>
     </html>
   );
