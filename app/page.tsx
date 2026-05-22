@@ -87,11 +87,11 @@ export default async function Home() {
 </p>
 
 <p className="about">
-  Currently building <strong>IndexQube</strong> - index calculation infrastructure for the financial industry, featuring multi-provider validation, audit-ready lineage, and quality controls for asset managers and index providers.
+  Currently building <strong>IndexQube</strong> -  A stateless L7 proxy written in Go that sits between Claude Code and Anthropic's API. 
 </p>
 
 <p className="about">
-  Outside of work, I write about software engineering, system design, and things I learn along the way. I believing in learning in public and building in the open.
+  Outside of work, I write about Software engineering, AI Agents, Data Analytics, System design, and things I learn along the way. I believing in learning in public and building in the open.
 </p>
         </section>
 
